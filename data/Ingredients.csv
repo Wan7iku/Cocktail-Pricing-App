@@ -1,0 +1,185 @@
+ingredient_id,category,subcategory,ingredient_name
+1,Liqour,Tequila,Jose Cuervo Gold
+2,Liqour,Tequila,Jose Cuervo Gold
+3,Liqour,Tequila,Jose Cuervo Silver
+4,Liqour,Tequila,Jose Cuervo Silver
+5,Liqour,Tequila,Olmeca Gold
+6,Liqour,Tequila,Olmeca Silver
+7,Liqour,Tequila,Olmeca chocolate
+8,Liqour,Tequila,Sierra Gold
+9,Liqour,Tequila,Sierra Silver
+10,Liqour,Tequila,Camino Gold
+11,Liqour,Tequila,Camino silver
+12,Liqour,Tequila,El charro Gold
+13,Liqour,Tequila,El charro silver
+14,Liqour,Tequila,Margaritaville Calypso Coconut
+15,Liqour,Tequila,Margaritaville Island Lime
+16,Liqour,Tequila,Margaritaville last Mango
+17,Liqour,Tequila,Margaritaville Paradise Passion Fruit
+18,Liqour,Tequila,Los Cabos Silver
+19,Liqour,Tequila,Los Cabos Gold
+20,Liqour,Gin,Gilbeys Gin
+21,Liqour,Gin,Beefeater
+22,Liqour,Gin,Bombay Sapphire
+23,Liqour,Gin,Bombay Sapphire
+24,Liqour,Gin,Gordons 
+25,Liqour,Gin,Gordons 
+26,Liqour,Gin,Chrome Gin
+27,Liqour,Gin,Beefeater Blood Orange
+28,Liqour,Gin,Gilbeys Mixed Berry
+29,Liqour,Gin,Kenyan Original 58 Orange
+30,Liqour,Gin,Kenyan Original 58 Classic        
+31,Liqour,Gin,Caribia Gin
+32,Liqour,Gin,Bustani Gin
+33,Liqour,Rum,Captain Morgan Spiced Gold
+34,Liqour,Rum,Captain Morgan Spiced Gold
+35,Liqour,Rum,Captain Morgan Dark
+36,Liqour,Rum,Old Monk
+37,Liqour,Rum,Myers Dark Rum
+38,Liqour,Rum,Kenya Cane Coconut
+39,Liqour,Rum,Kenya Cane Pineapple
+40,Liqour,Rum,Kenya Cane Smooth
+41,Liqour,Rum,Kenya Cane Lemon Ginger
+42,Liqour,Rum,Kenya Cane Citrus
+43,Liqour,Rum,Barcardi Spiced Rum
+44,Liqour,Rum,Barcardi Oro
+45,Liqour,Rum,Barcadi Oro
+46,Liqour,Rum,Barcadi Limon
+47,Liqour,Rum,Barcardi Carta Blanca Gold
+48,Liqour,Rum,Old Nick Carribean
+49,Liqour,Rum,Old Nick Carribean
+50,Liqour,Rum,Old Nick Carribean Dark
+51,Liqour,Rum,Malibu
+52,Liqour,Rum,Havana Club Anejo
+53,Liqour,Rum,Cachaca 51
+54,Liqour,Rum,Cachaca 51
+55,Liqour,Vodka,Sminorff Red
+56,Liqour,Vodka,Sminorff Red 
+57,Liqour,Vodka,Sminorff Vanilla
+58,Liqour,Vodka,Sminorff Orange
+59,Liqour,Vodka,Sminorff Orange
+60,Liqour,Vodka,Sminorff Espresso
+61,Liqour,Vodka,Sminorff Espresso
+62,Liqour,Vodka,Sminorff Gold
+63,Liqour,Vodka,Sminorff Citrus
+64,Liqour,Vodka,Sminorff Citrus
+65,Liqour,Vodka,Sminorff Green Apple
+66,Liqour,Vodka,Sminorff Green Apple
+67,Liqour,Vodka,Sminorff Black
+68,Liqour,Vodka,Sminorff Raspberry
+69,Liqour,Vodka,Sminorff Raspberry
+70,Liqour,Vodka,Sminorff Blue
+71,Liqour,Vodka,Sminorff Blueberry
+72,Liqour,Vodka,Sminorff Blue
+73,Liqour,Vodka,Skyy Raspberry
+74,Liqour,Vodka,Skyy Raspberry
+75,Liqour,Vodka,Skyy Grape
+76,Liqour,Vodka,Skyy Grape
+77,Liqour,Vodka,Skyy Ginger
+78,Liqour,Vodka,Skyy Ginger
+79,Liqour,Vodka,Skyy Dragon Fruit
+80,Liqour,Vodka,Skyy Dragon Fruit
+81,Liqour,Vodka,Skyy Cherry
+82,Liqour,Vodka,Skyy Cherry
+83,Liqour,Vodka,Skyy Vodka
+84,Liqour,Vodka,Skyy Vodka
+85,Liqour,Vodka,Skyy Passion
+86,Liqour,Vodka,Skyy Passion
+87,Liqour,Vodka,Skyy Coconut
+88,Liqour,Vodka,Skyy Coconut
+89,Liqour,Vodka,Skyy Blood Orange
+90,Liqour,Vodka,Skyy Blood Orange
+91,Liqour,Vodka,Neon Pineapple
+92,Liqour,Vodka,Neon Lemon
+93,Liqour,Vodka,Neon Coffee
+94,Liqour,Vodka,Flirt Vodka Green Apple
+95,Liqour,Vodka,Flirt Vodka Green Apple
+96,Liqour,Vodka,Flirt Vodka Green Apple
+97,Liqour,Vodka,Flirt Vodka
+98,Liqour,Vodka,Flirt Vodka
+99,Liqour,Vodka,Flirt Vodka
+100,Liqour,Vodka,Flirt Vodka Orange
+101,Liqour,Vodka,Flirt Vodka Orange
+102,Liqour,Vodka,Flirt Vodka Orange
+103,Liqour,Vodka,Titos Handmade Vodka
+104,Liqour,Vodka,Titos Handmade Vodka
+105,Liqour,Vodka,Vodka 360 Huckleberry
+106,Liqour,Vodka,Vodka 360 Madagascar Vanilla
+107,Liqour,Vodka,Chrome Vodka
+108,Liqour,Whisky ,Cutty Sark Blended Scotch Whisky 
+109,Liqour,Whisky ,Cutty Sark Blended Scotch Whisky 
+110,Liqour,Whisky ,Black and White
+111,Liqour,Whisky ,Black and White
+112,Liqour,Whisky ,VAT 69
+113,Liqour,Whisky ,VAT 69
+114,Liqour,Whisky ,Tullamore Dew
+115,Liqour,Whisky ,Tullamore Dew
+116,Liqour,Whisky ,Jack Daniels Old No7
+117,Liqour,Whisky ,Jack Daniels Old No7
+118,Liqour,Whisky ,Jim Beam Bourbon
+119,Liqour,Whisky ,Famous Grouse
+120,Liqour,Whisky ,Famous Grouse
+121,Liqour,Whisky ,J&B Rare
+122,Liqour,Whisky ,J&B Rare
+123,Liqour,Whisky ,Grants
+124,Liqour,Whisky ,Grants
+125,Liqour,Whisky ,Best
+126,Liqour,Whisky ,William Lawsons
+127,Liqour,Whisky ,William Lawsons
+128,Liqour,Brandy,Richot
+129,Liqour,Brandy,Viceroy
+130,Liqour,Brandy,St Rhys French Napoleon
+131,Liqour,Brandy,Hennessy Vs
+132,Liqour,Brandy,Three Barrels
+133,Liqour,Brandy,Bardinet Vsop
+134,Liqour,Brandy,St Remy VSOP
+135,Liqour,Brandy,St Remy VSOP
+136,Liqour,Brandy,Torres
+137,Liqour,Brandy,Beehive VSOP Brandy
+138,Liqour,Brandy,Beehive Honey Brandy
+139,Liqour,Brandy,Carlos III Brandy
+140,liquer,Fruit ,Archers Peach
+141,liquer,Fruit ,Archers Peach
+142,liquer,Cocktail,Zappa
+143,liquer,Cocktail,Zappa White
+144,liquer,Cocktail,Zappa Red
+145,liquer,Cocktail,Bardinet de Cassis
+146,liquer,Cocktail,Bardinet de Menthe
+147,liquer,Cocktail,Aperol
+148,liquer,Cocktail,Aperol
+149,liquer,Cocktail,Butlers Expresso
+150,liquer,Cocktail,Butlers Ginger
+151,liquer,Cocktail,Butlers Peppermint
+152,liquer,Cocktail,Butlers Triple Sec
+153,liquer,Cocktail,Butlers Blue Curacao
+154,liquer,Cocktail,Butlers Strawberry
+155,liquer,Cocktail,Bottega Pistachio
+156,liquer,Cocktail,Campari Bitters
+157,liquer,Cocktail,Bols Cherry Brandy
+158,liquer,Cocktail,Cinzano Vermouth Extra Dry
+159,liquer,Cocktail,Tango Sour Cherry
+160,liquer,Cocktail,Bols Cräme De Menthe
+161,liquer,Cocktail,Bols Butterscotch
+162,liquer,Cocktail,Bols Cacao Brown
+163,liquer,Cocktail,Bols Coffee
+164,liquer,Cocktail,Bols Strawberry
+165,liquer,Cocktail,Bols Cräme de Casis
+166,liquer,Cocktail,Bols Peppermint Green
+167,liquer,Cocktail,Bols Peppermint White
+168,liquer,Cocktail,Bols Banana
+169,liquer,Cocktail,Bols Vanilla
+170,liquer,Cocktail,Bottega Pomegranate
+171,liquer,Cocktail,Bols Elderflower
+172,liquer,Cocktail,Cuerpo Raspberry
+173,liquer,Cocktail,Bols Sour Apple
+174,liquer,Cocktail,Bols Apricot Brandy
+175,liquer,Fruit ,Cointreau
+176,liquer,Fruit ,Cointreau
+177,liquer,Fruit ,Grand marnier
+178,liquer,Cream,Amarula 
+179,liquer,Cream,Amarula 
+180,liquer,Cream,Strawberry Lips
+181,liquer,Cream,Baileys Irish Cream
+182,liquer,Cream,Baileys Irish Cream
+183,liquer,Cream,Best Cream
+184,liquer,Cream,Zanzi cream
