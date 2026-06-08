@@ -1,0 +1,58 @@
+Cocktail_id,cocktail_name,ingredient_id,ingredient_name,quantity
+v01sb,Sea Breeze,56,Sminorff Red,60
+v01sb,Sea Breeze,202,Grapefruit juice,30
+v01sb,Sea Breeze,203,Cranberry juice,60
+v01sb,Sea Breeze,215,Sugar syrup,15
+v01sb,Sea Breeze,229,Ice-cubed,100
+v01sb,Sea Breeze,228,Grapefruit,50
+v02br,Black Russian,56,Sminorff Red,45
+v02br,Black Russian,190,Kahlua,15
+v02br,Black Russian,229,Ice-cubed,100
+v02br,Black Russian,230,Cherry,10
+v03cm,Cosmopolitan,56,Sminorff Red,37.5
+v03cm,Cosmopolitan,203,Cranberry juice,15
+v03cm,Cosmopolitan,204,Lime juice,7.5
+v03cm,Cosmopolitan,153,Butlers Triple Sec,22.5
+v03cm,Cosmopolitan,231,Orange zest,1
+v04hw,Harvey Wallbanger,56,Sminorff Red,60
+v04hw,Harvey Wallbanger,191,Galliano,30
+v04hw,Harvey Wallbanger,207,orange juice,90
+v04hw,Harvey Wallbanger,229,Ice-cubed,100
+v04hw,Harvey Wallbanger,232,Orange spiral,1
+v05sotb,Sex on the beach ,56,Sminorff Red,45
+v05sotb,Sex on the beach ,141,Archers peach,22.5
+v05sotb,Sex on the beach ,203,Cranberry juice,30
+v05sotb,Sex on the beach ,207,orange juice,30
+v05sotb,Sex on the beach ,229,Ice-cubed,100
+v05sotb,Sex on the beach ,232,Orange spiral,1
+v06mm,Moscow Mule,56,Sminorff Red,60
+v06mm,Moscow Mule,204,Lime juice,22.5
+v06mm,Moscow Mule,215,Sugar syrup,7.5
+v06mm,Moscow Mule,217,Ginger beer,30
+v06mm,Moscow Mule,229,Ice-cubed,100
+v07cp,Caipirosvka,233,lime wedge,4
+v07cp,Caipirosvka,234,castor sugar,3
+v07cp,Caipirosvka,56,Sminorff Red,60
+v07cp,Caipirosvka,229,Ice-cubed,100
+v08kk,Kamikaze,56,Sminorff Red,52.5
+v08kk,Kamikaze,153,Butlers Triple Sec,22.5
+v08kk,Kamikaze,204,Lime juice,15
+v08kk,Kamikaze,229,Ice-cubed,100
+v08kk,Kamikaze,233,lime wedge,1
+v09bm,Bloody Mary,56,Sminorff Red,60
+v09bm,Bloody Mary,205,Tomato juice,90
+v09bm,Bloody Mary,204,Lime juice,15
+v09bm,Bloody Mary,206,Lemon juice,15
+v09bm,Bloody Mary,235,Tabasco sauce,3
+v09bm,Bloody Mary,236,Worcestershire sauce,3
+v09bm,Bloody Mary,237,salt,2
+v09bm,Bloody Mary,238,Black pepper,2
+v09bm,Bloody Mary,229,Ice-cubed,100
+v09bm,Bloody Mary,233,lime wedge,1
+v09bm,Bloody Mary,244,celerly stick,40
+v10scs,Slow Comfortable Screw,56,Sminorff Red,45
+v10scs,Slow Comfortable Screw,32,Bustani Gin,15
+v10scs,Slow Comfortable Screw,207,Orange juice,90
+v10scs,Slow Comfortable Screw,229,Ice-cubed,100
+v10scs,Slow Comfortable Screw,182,Sourthern Comfort,15
+v10scs,Slow Comfortable Screw,230,cherry ,10
