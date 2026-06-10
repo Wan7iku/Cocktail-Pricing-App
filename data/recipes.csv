@@ -91,6 +91,62 @@ g06bx,Bronx,207,orange juice,30
 g06bx,Bronx,201,Martini Extra Dry,7.5
 g06bx,Bronx,198,Martini Rosso,7.5
 g06bx,Bronx,249,orange slice,0.125
+g07fk,French Kiss,20,Gilbeys Gin,37.5
+g07fk,French Kiss,178,Grand marnier,22.5
+g07fk,French Kiss,231,orange zest,1
+g08wl,White lady,20,Gilbeys Gin,37.5
+g08wl,White lady,177,cointreau,22.5
+g08wl,White lady,206,Lemon juice,15
+g08wl,White lady,232,Orange spiral,1
+g09hp,Honolulu punch,20,Gilbeys Gin,60
+g09hp,Honolulu punch,208,Pineapple juice,15
+g09hp,Honolulu punch,207,orange juice,15
+g09hp,Honolulu punch,206,lemon juice,15
+g09hp,Honolulu punch,225,Angostura bitters,2
+g09hp,Honolulu punch,250,Pineapple spear,50
+g09hp,Honolulu punch,229,Ice-cubed,100
+g10ng,Negroni,20,Gilbeys Gin,30
+g10ng,Negroni,157,Campari,30
+g10ng,Negroni,198,Martini Rosso,30
+g10ng,Negroni,229,Ice-cubed,100
+g10ng,Negroni,231,Orange zest,1
+g11pc,Pimms cup no1,227,Pimms,45
+g11pc,Pimms cup no1,20,Gilbeys Gin,15
+g11pc,Pimms cup no1,218,Sprite,30
+g11pc,Pimms cup no1,251,Halved strawberry,30
+g11pc,Pimms cup no1,247,lemon slice,2
+g11pc,Pimms cup no1,252,cucumber slice,0.3
+g11pc,Pimms cup no1,253,banana slice,0.2
+g11pc,Pimms cup no1,248,mint leaves,2
+g11pc,Pimms cup no1,229,Ice-cubed,100
+t01mg,Margarita,11,Camino silver,45
+t01mg,Margarita,153,Triple sec,22.5
+t01mg,Margarita,204,Lime juice,22.5
+t01mg,Margarita,237,salt,5
+t01mg,Margarita,233,lime wedge,1
+t02ts,Tequila sunrise,11,Camino silver,60
+t02ts,Tequila sunrise,207,Orange juice,120
+t02ts,Tequila sunrise,216,Grenadine syrup,7.5
+t02ts,Tequila sunrise,229,ice-cubed,100
+t02ts,Tequila sunrise,249,orange slice,0.125
+t05ap,Acapulco,10,Camino gold,60
+t05ap,Acapulco,208,pineapple juice,60
+t05ap,Acapulco,202,Grapefruit juice,30
+t05ap,Acapulco,229,Ice-cubed,100
+t05ap,Acapulco,250,pineapple leaf,50
+t03ed,El Diablo,11,Camino silver,52.5
+t03ed,El Diablo,166,Creme de casis,7.5
+t03ed,El Diablo,204,lime juice,15
+t03ed,El Diablo,224,Ginger ale,90
+t03ed,El Diablo,229,Ice-cubed,100
+t03ed,El Diablo,233,lime slice,1
+t03ed,El Diablo,230,cherry,20
+t04ib,ice breaker,11,Camino silver,45
+t04ib,ice breaker,153,Triple sec,22.5
+t04ib,ice breaker,202,Grapefruit juice,30
+t04ib,ice breaker,216,Grenadine syrup,7.5
+t04ib,ice breaker,229,Ice-cubed,100
+t04ib,ice breaker,228,Grapefruit slice,1
 
 
 
