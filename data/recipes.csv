@@ -257,18 +257,18 @@ r02cl,Cuba libre,37,Dark rum,60
 r02cl,Cuba libre,233,lime wedge,2
 r02cl,Cuba libre,220,coke,30
 r02cl,Cuba libre,229,ice-cubed,100
-r03cd,Classic Daiquiri,45,Barcadi Oro,60
-r03cd,Classic Daiquiri,204,lime juice,22.5
-r03cd,Classic Daiquiri,215,sugar syrup,7.5
-r03cd,Classic Daiquiri,233,lime wedge,1
-r04mt,Mai tai,45,Barcadi Oro,30
-r04mt,Mai tai,35,dark rum,30
-r04mt,Mai tai,215,Sugar syrup,15
-r04mt,Mai tai,204,lime juice,22.5
-r04mt,Mai tai,153,triple sec,22.5
-r04mt,Mai tai,248,mint,2
-r04mt,Mai tai,229,ice-cubed,100
-r04mt,Mai tai,233,lime wedge,1
+r03cd,Classic_Daiquiri,45,Barcadi Oro,60
+r03cd,Classic_Daiquiri,204,lime juice,22.5
+r03cd,Classic_Daiquiri,215,sugar syrup,7.5
+r03cd,Classic_Daiquiri,233,lime wedge,1
+r04mt,Mai_tai,45,Barcadi Oro,30
+r04mt,Mai_tai,35,dark rum,30
+r04mt,Mai_tai,215,Sugar syrup,15
+r04mt,Mai_tai,204,lime juice,22.5
+r04mt,Mai_tai,153,triple sec,22.5
+r04mt,Mai_tai,248,mint,2
+r04mt,Mai_tai,229,ice-cubed,100
+r04mt,Mai_tai,233,lime wedge,1
 r05pc,pinacolada,35,Dark rum,60
 r05pc,pinacolada,250,pineapple chunks,150
 r05pc,pinacolada,264,coconut cream,90
