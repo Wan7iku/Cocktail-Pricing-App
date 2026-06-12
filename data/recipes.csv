@@ -200,6 +200,131 @@ b10bts,Between the sheets,45,Barcadi Oro,30
 b10bts,Between the sheets,153,triple sec,22.5
 b10bts,Between the sheets,206,Lemon juice,15
 b10bts,Between the sheets,231,Orange zest,1
+w01ll,Lynchburg lemonade,215,Sugar syrup,7.5
+w01ll,Lynchburg lemonade,153,Triple sec,22.5
+w01ll,Lynchburg lemonade,206,lemon juice,30
+w01ll,Lynchburg lemonade,117,Jack Daniels,45
+w01ll,Lynchburg lemonade,218,Sprite,30
+w01ll,Lynchburg lemonade,229,Ice-cubed,100
+w01ll,Lynchburg lemonade,249,orange slice,0.125
+w02mn,Manhattan,198,Martini Rosso,15
+w02mn,Manhattan,199,Martini Bianco,15
+w02mn,Manhattan,118,Bourbon,52.5
+w02mn,Manhattan,225,Angostura bitters,2
+w02mn,Manhattan,230,Cherry,10
+w02mn,Manhattan,231,Orange zest,1
+w03mj,Mint Julep,118,Bourbon,60
+w03mj,Mint Julep,248,Mint leaves,1
+w03mj,Mint Julep,234,castor sugar,10
+w03mj,Mint Julep,229,Ice-cubed,100
+w04of	Old Fashioned,118,Bourbon,60
+w04of,Old Fashioned,231,Orange peel,1
+w04of,Old Fashioned,234,castor sugar,10
+w04of,Old Fashioned,225,Angostura bitters,2
+w04of,Old Fashioned,221,Soda water,30
+w04of,Old Fashioned,229,ice-cubed,100
+w05rn,Rusty Nail,109,Scotch,52.5
+w05rn,Rusty Nail,186,Drambuie,22.5
+w05rn,Rusty Nail,229,ice-cubed,100
+w06ws,Whisky sour,215,Sugar syrup,15
+w06ws,Whisky sour,206,lemon juice,30
+w06ws,Whisky sour,118,Bourbon,60
+w06ws,Whisky sour,246,Egg white,1
+w06ws,Whisky sour,225,Angostura bitters,2
+w06ws,Whisky sour,229,Ice-cubed,100
+w06ws,Whisky sour,247,lemon slice,1
+w06ws,Whisky sour,230,cherry,10
+w07ic,Irish coffee,115,Irish whisky,52.5
+w07ic,Irish coffee,257,Hot espresso,120
+w07ic,Irish coffee,262,Sugar,30
+w07ic,Irish coffee,242,Whipping cream,60
+w08gfGodfather,109,Scotch whisky,45
+w08gf,Godfather,263,Amaretto,15
+w08gf,Godfather,229,Ice-cubed,100
+w09hw,Hemingway,118,Bourbon,45
+w09hw,Hemingway,186,Drambuie,1
+w09hw,Hemingway,206,Lemon juice,15
+w09hw,Hemingway,230,Cherry,10
+w10rr,Rob roy,109,Scotch,45
+w10rr,Rob roy,198,Martini Rosso,15
+w10rr,Rob roy,225,Angostura bitters,2
+w10rr,Rob roy,230,cherry,10
+r01ca,Caipirinha,54,cachaca,60
+r01ca,Caipirinha,233,lime wedge,4
+r01ca,Caipirinha,234,castor sugar,30
+r01ca,Caipirinha,229,ice-cubed,100
+r02cl,Cuba libre,37,Dark rum,60
+r02cl,Cuba libre,233,lime wedge,2
+r02cl,Cuba libre,220,coke,30
+r02cl,Cuba libre,229,ice-cubed,100
+r03cd,Classic Daiquiri,45,Barcadi Oro,60
+r03cd,Classic Daiquiri,204,lime juice,22.5
+r03cd,Classic Daiquiri,215,sugar syrup,7.5
+r03cd,Classic Daiquiri,233,lime wedge,1
+r04mt,Mai tai,45,Barcadi Oro,30
+r04mt,Mai tai,35,dark rum,30
+r04mt,Mai tai,215,Sugar syrup,15
+r04mt,Mai tai,204,lime juice,22.5
+r04mt,Mai tai,153,triple sec,22.5
+r04mt,Mai tai,248,mint,2
+r04mt,Mai tai,229,ice-cubed,100
+r04mt,Mai tai,233,lime wedge,1
+r05pc,pinacolada,35,Dark rum,60
+r05pc,pinacolada,250,pineapple chunks,150
+r05pc,pinacolada,264,coconut cream,90
+r05pc,pinacolada,229,ice-cubed,100
+r06pp,Planters punch,35,dark rum,30
+r06pp,Planters punch,45,Barcadi Oro,30
+r06pp,Planters punch,204,lime juice,22.5
+r06pp,Planters punch,207,orange juice,30
+r06pp,Planters punch,208,pineapple juice,30
+r06pp,Planters punch,216,Grenadine syrup,7.5
+r06pp,Planters punch,229,ice-cubed,100
+r07bd,Barcadi,45,Bacardi,60
+r07bd,Barcadi,204,lime juice,22.5
+r07bd,Barcadi,216,Grenadine syrup,7.5
+r07bd,Barcadi,233,lime wedge,1
+r08mj,Mojito,45,Barcadi Oro,45
+r08mj,Mojito,204,lime juice,22.5
+r08mj,Mojito,34,castor sugar,30
+r08mj,Mojito,248,mint,4
+r08mj,Mojito,221,Soda water,30
+r08mj,Mojito,229,Ice-cubed,100
+r08mj,Mojito,233,lime wedge,4
+r09zb,Zombie,45,Barcadi Oro,30
+r09zb,Zombie,34,golden rum,30
+r09zb,Zombie,35,dark rum,30
+r09zb,Zombie,175,apricot brandy30,
+r09zb,Zombie,208,pineapple juice,30
+r09zb,Zombie,265,papaya juice,30
+r09zb,Zombie,266,151-prrof rum,15
+r09zb,Zombie,216,Grenadine syrup,7.5
+r09zb,Zombie,229,Ice-cubed,100
+r09zb,Zombie,249,orange slice,1
+r10lit,Long Island Iced Tea,56,Sminorff Red,15
+r10lit,Long Island Iced Tea,20,Gin,15
+r10lit,Long Island Iced Tea,45,Barcadi Oro,15
+r10lit,Long Island Iced Tea,11,Camino silver,15
+r10lit,Long Island Iced Tea,153,triple sec,15
+r10lit,Long Island Iced Tea,215,sugar syrup,7.5
+r10lit,Long Island Iced Tea,206,lemon juice,30
+r10lit,Long Island Iced Tea,220,coke,30
+r10lit,Long Island Iced Tea,229,Ice-cubed,100
+r10lit,Long Island Iced Tea,247,lemon slice,1
+r11hc,Hurricane,45,Barcadi Oro,30
+r11hc,Hurricane,206,lemon juice,15
+r11hc,Hurricane,266,over proof rum,15
+r11hc,Hurricane,209,passion juice,30
+r11hc,Hurricane,215,Sugar syrup,7.5
+r11hc,Hurricane,35,Captain Morgan dark,30
+r11hc,Hurricane,229,Ice-cubed,100
+r12rb,Rumble,35,Captain Morgan dark,15
+r12rb,Rumble,190,khalua,22.5
+r12rb,Rumble,204,lime juice,7.5
+r12rb,Rumble,221,Soda water,30
+r12rb,Rumble,229,ice-cubed,100
+r12rb,Rumble,233,lime wedge,2
+
 
 
 
