@@ -158,12 +158,12 @@ ingredient_id,category,subcategory,ingredient_name,bottle_size_ml,bottle_cost,co
 158,liquer,Cocktail,Bols Cherry Brandy,700,3500,5
 159,liquer,Cocktail,Cinzano Vermouth Extra Dry,750,3000,4
 160,liquer,Cocktail,Tango Sour Cherry,750,3000,4
-161,liquer,Cocktail,Bols Cräme De Menthe,750,3000,4
+161,liquer,Cocktail,Bols Cr≈†me De Menthe,750,3000,4
 162,liquer,Cocktail,Bols Butterscotch,750,3000,4
 163,liquer,Cocktail,Bols Cacao Brown,750,3000,4
 164,liquer,Cocktail,Bols Coffee,750,3000,4
 165,liquer,Cocktail,Bols Strawberry,750,3000,4
-166,liquer,Cocktail,Bols Cräme de Casis,750,3500,4.666666667
+166,liquer,Cocktail,Bols Cr≈†me de Casis,750,3500,4.666666667
 167,liquer,Cocktail,Bols Peppermint Green,750,3000,4
 168,liquer,Cocktail,Bols Peppermint White,750,3000,4
 169,liquer,Cocktail,Bols Banana,750,3000,4
@@ -238,10 +238,29 @@ ingredient_id,category,subcategory,ingredient_name,bottle_size_ml,bottle_cost,co
 239,Mixer,Spices,Cinammon,100,200,2
 240,Mixer,Spices,Nutmeg,50,215,4.3
 241,Mixer,Spices,Cardamom,100,500,5
-242,Mixer,Cream,Whipping cream,,,
-243,Mixer,Sauce,Horseradish sauce,,,
+242,Mixer,Cream,Whipping cream,
+243,Mixer,Sauce,Horseradish sauce,
 244,Garnish,Herb,Celery,500,200,0.4
 245,Garnish,Fruit ,Olive,345,200,0.579710145
 246,Mixer,Spices,Egg white,30,650,21.66666667
 247,Garnish,Fruit ,Lemon slice,8,30,3.75
 248,Garnish,Herb,Mint sprig,20,80,4
+249,Garnish,Fruit,orange slice,1,40,40
+250,Garnish,Fruit,Pineapple,1500,230,0.153333333
+251,Garnish,Fruit,Strawberries,125,260,2.08
+252,Garnish,Fruit,Cucumber slice,1,50,50
+253,Garnish,Fruit,Banana slice,1,10,10
+254,Liquer,Fruit,Bols cr√®me de cacao,750,1815,2.42
+255,liquer,Fruit,Benedictine,1000,5200,5.2
+256,liquer,Fruit,Bols kirsch,750,1815,2.42
+257,Mixer,Coffee,Espresso coffee,1000	500	0.5
+258,Garnish,Fruit,Mango,1,50,50
+259,Garnish,Fruit,Apples,1,50,50
+260,Garnish,Spices,Cloves,50,250,5
+261,Liqour,Wine,Red wine,750,1515,2.02
+262,mixer,spices,Sugar,1000,150,0.15
+263,liquer,Fruit,Amaretto Galatti,1000,2500,2.5
+264,cream,coconut cream,200,240,1.2
+265,Mixer,Juice,papaya juice,1000,400,0.4
+266,Liqour,Rum,Barcadi,151,750,1650,2.2
+
