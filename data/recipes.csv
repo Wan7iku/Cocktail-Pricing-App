@@ -217,7 +217,7 @@ w03mj,Mint Julep,118,Bourbon,60
 w03mj,Mint Julep,248,Mint leaves,1
 w03mj,Mint Julep,234,castor sugar,10
 w03mj,Mint Julep,229,Ice-cubed,100
-w04of	Old Fashioned,118,Bourbon,60
+w04of,Old Fashioned,118,Bourbon,60
 w04of,Old Fashioned,231,Orange peel,1
 w04of,Old Fashioned,234,castor sugar,10
 w04of,Old Fashioned,225,Angostura bitters,2
@@ -238,7 +238,7 @@ w07ic,Irish coffee,115,Irish whisky,52.5
 w07ic,Irish coffee,257,Hot espresso,120
 w07ic,Irish coffee,262,Sugar,30
 w07ic,Irish coffee,242,Whipping cream,60
-w08gfGodfather,109,Scotch whisky,45
+w08gf,Godfather,109,Scotch whisky,45
 w08gf,Godfather,263,Amaretto,15
 w08gf,Godfather,229,Ice-cubed,100
 w09hw,Hemingway,118,Bourbon,45
