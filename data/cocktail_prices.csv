@@ -1,0 +1,61 @@
+Cocktail_id,cocktail_name,total_cost
+b01sc,Side car,231.24999998750002
+b02ba,Brandy Alexander,239.09999999000001
+b03sa,Sangria,6303.51666664
+b04bb,B&B,241.99999998750002
+b05bs,Brandy stinger,218.99999998750002
+b06fc,French connection,294.28571427
+b07cb,Cherry Blossom,254.74999999
+b08bj,Black jack,226.699999985
+b09bc,Brandy cooler,231.04999998000002
+b10bts,Between the sheets,282.49999999
+g01cm,Classic Martini,155.00000001499998
+g02gf,Gin Fizz,180.71666668999998
+g03bb,Bramble,187.2162162425
+g04ss,Singapore Sling,238.516216235
+g05pl,Pink lady,141.7500000225
+g06bx,Bronx,167.900000015
+g07fk,French Kiss,241.785714295
+g08wl,White lady,200.00000001249998
+g09hp,Honolulu punch,168.61666666999997
+g10ng,Negroni,337.00000002
+g11pc,Pimms cup no1,289.45000002
+r01ca,Caipirinha,303.4
+r02cl,Cuba libre,217.54999998000002
+r03cd,Classic_Daiquiri,170.0
+r04mt,Mai_tai,237.24999999
+r05pc,pinacolada,215.99999993
+r06pp,Planters punch,153.6499999925
+r07bd,Barcadi,172.7500000025
+r08mj,Mojito,259.55
+r09zb,Zombie,311.9999999925
+r10lit,Long Island Iced Tea,270.05
+r11hc,Hurricane,171.74999999
+r12rb,Rumble,128.674999995
+t01mg,Margarita,341.999999985
+t02ts,Tequila sunrise,374.5999999825
+t03ed,El Diablo,385.47788693499996
+t04ib,ice breaker,364.49999998749996
+t05ap,Acapulco,362.66666663
+v01sb,Sea Breeze,814.5
+v02br,Black Russian,183.46621622
+v03cm,Cosmopolitan,200.5
+v04hw,Harvey Wallbanger,473.27142857999996
+v05sotb,Sex on the beach ,236.4
+v06mm,Moscow Mule,179.99999999
+v07cp,Caipirosvka,175.84
+v08kk,Kamikaze,235.75
+v09bm,Bloody Mary,253.1
+v10scs,Slow Comfortable Screw,255.416216225
+w01ll,Lynchburg lemonade,338.8
+w02mn,Manhattan,366.21621622
+w03mj,Mint Julep,251.8
+w04of,Old Fashioned,40.6
+w04of	Old Fashioned,118,0.0
+w05rn,Rusty Nail,275.75000000750003
+w06ws,Whisky sour,310.13288289
+w07ic,Irish coffee,390.75
+w08gf,Godfather,42.5
+w08gfGodfather,109,0.0
+w09hw,Hemingway,199.382882887
+w10rr,Rob roy,189.71621621999998
