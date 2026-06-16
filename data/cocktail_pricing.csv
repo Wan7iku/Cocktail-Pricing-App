@@ -1,0 +1,59 @@
+Cocktail_id,cocktail_name,total_cost,cost_after_spillage,selling_price_before_vat,selling_price_after_vat
+b01sc,Side car,231.25,242.81,693.75,804.75
+b02ba,Brandy Alexander,239.1,251.05,717.3,832.07
+b03sa,Sangria,6303.52,6618.69,18910.55,21936.24
+b04bb,B&B,242.0,254.1,726.0,842.16
+b05bs,Brandy stinger,219.0,229.95,657.0,762.12
+b06fc,French connection,294.29,309.0,882.86,1024.11
+b07cb,Cherry Blossom,254.75,267.49,764.25,886.53
+b08bj,Black jack,226.7,238.03,680.1,788.92
+b09bc,Brandy cooler,231.05,242.6,693.15,804.05
+b10bts,Between the sheets,282.5,296.62,847.5,983.1
+g01cm,Classic Martini,155.0,162.75,465.0,539.4
+g02gf,Gin Fizz,180.72,189.75,542.15,628.89
+g03bb,Bramble,187.22,196.58,561.65,651.51
+g04ss,Singapore Sling,238.52,250.44,715.55,830.04
+g05pl,Pink lady,141.75,148.84,425.25,493.29
+g06bx,Bronx,167.9,176.3,503.7,584.29
+g07fk,French Kiss,241.79,253.88,725.36,841.41
+g08wl,White lady,200.0,210.0,600.0,696.0
+g09hp,Honolulu punch,168.62,177.05,505.85,586.79
+g10ng,Negroni,337.0,353.85,1011.0,1172.76
+g11pc,Pimms cup no1,289.45,303.92,868.35,1007.29
+r01ca,Caipirinha,303.4,318.57,910.2,1055.83
+r02cl,Cuba libre,217.55,228.43,652.65,757.07
+r03cd,Classic_Daiquiri,170.0,178.5,510.0,591.6
+r04mt,Mai_tai,237.25,249.11,711.75,825.63
+r05pc,pinacolada,216.0,226.8,648.0,751.68
+r06pp,Planters punch,153.65,161.33,460.95,534.7
+r07bd,Barcadi,172.75,181.39,518.25,601.17
+r08mj,Mojito,259.55,272.53,778.65,903.23
+r09zb,Zombie,312.0,327.6,936.0,1085.76
+r10lit,Long Island Iced Tea,270.05,283.55,810.15,939.77
+r11hc,Hurricane,171.75,180.34,515.25,597.69
+r12rb,Rumble,128.67,135.11,386.02,447.79
+t01mg,Margarita,342.0,359.1,1026.0,1190.16
+t02ts,Tequila sunrise,374.6,393.33,1123.8,1303.61
+t03ed,El Diablo,385.48,404.75,1156.43,1341.46
+t04ib,ice breaker,364.5,382.72,1093.5,1268.46
+t05ap,Acapulco,362.67,380.8,1088.0,1262.08
+v01sb,Sea Breeze,814.5,855.22,2443.5,2834.46
+v02br,Black Russian,183.47,192.64,550.4,638.46
+v03cm,Cosmopolitan,200.5,210.52,601.5,697.74
+v04hw,Harvey Wallbanger,473.27,496.94,1419.81,1646.98
+v05sotb,Sex on the beach ,236.4,248.22,709.2,822.67
+v06mm,Moscow Mule,180.0,189.0,540.0,626.4
+v07cp,Caipirosvka,175.84,184.63,527.52,611.92
+v08kk,Kamikaze,235.75,247.54,707.25,820.41
+v09bm,Bloody Mary,253.1,265.76,759.3,880.79
+v10scs,Slow Comfortable Screw,255.42,268.19,766.25,888.85
+w01ll,Lynchburg lemonade,338.8,355.74,1016.4,1179.02
+w02mn,Manhattan,366.22,384.53,1098.65,1274.43
+w03mj,Mint Julep,251.8,264.39,755.4,876.26
+w04of,Old Fashioned,280.6,294.63,841.8,976.49
+w05rn,Rusty Nail,275.75,289.54,827.25,959.61
+w06ws,Whisky sour,310.13,325.64,930.4,1079.26
+w07ic,Irish coffee,390.75,410.29,1172.25,1359.81
+w08gf,Godfather,146.0,153.3,438.0,508.08
+w09hw,Hemingway,199.38,209.35,598.15,693.85
+w10rr,Rob roy,189.72,199.2,569.15,660.21
