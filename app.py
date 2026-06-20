@@ -75,12 +75,14 @@ recommended_price_2 = recommended_price_before_vat_2 * 1.16
 
 current_profit_1 = menu_price_1 - base_cost_1
 recommended_profit_1 = recommended_price_1 - base_cost_1
-gp_1 = ((menu_price_1 - cost_after_spillage_1) / menu_price_1) * 100
+profit_1 = recommended_price_1 - cost_after_spillage_1
+gp_1 = ((recommended_price_1 - cost_after_spillage_1) / recommended_price_1) * 100
 markup_1 = menu_price_1 / cost_after_spillage_1
 
 current_profit_2 = menu_price_2 - base_cost_2
 recommended_profit_2 = recommended_price_2 - base_cost_2
-gp_2 = ((menu_price_2 - cost_after_spillage_2) / menu_price_2) * 100
+profit_2 = recommended_price_2 - cost_after_spillage_2
+gp_2 = ((recommended_price_2 - cost_after_spillage_2) / recommended_price_2) * 100
 markup_2 = menu_price_2 / cost_after_spillage_2
 
 
@@ -92,8 +94,8 @@ col1, col2 = st.columns(2)
 with col1:
     st.subheader(cocktail_1)
     st.metric("Base Cost", money(base_cost_1))
-    st.metric("Menu Price", money(menu_price_1))
-    st.metric("Recommended Price", money(recommended_price_1))
+    st.metric("Current Menu Price", money(menu_price_1))
+    st.metric("Recommended Menu Price", money(recommended_price_1))
     st.metric("Current Profit", money(current_profit_1))
     st.metric("Recommended Profit", money(recommended_profit_1))
     st.metric("Current GP %", f"{gp_1:.1f}%")
@@ -108,8 +110,8 @@ with col1:
 with col2:
     st.subheader(cocktail_2)
     st.metric("Base Cost", money(base_cost_2))
-    st.metric("Menu Price", money(menu_price_2))
-    st.metric("Recommended Price", money(recommended_price_2))
+    st.metric("Current Menu Price", money(menu_price_2))
+    st.metric("Recommended Menu Price", money(recommended_price_2))
     st.metric("Current Profit", money(current_profit_2))
     st.metric("Recommended Profit", money(recommended_profit_2))
     st.metric("Current GP %", f"{gp_2:.1f}%")
