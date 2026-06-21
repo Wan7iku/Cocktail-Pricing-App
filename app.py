@@ -16,7 +16,8 @@ NUMERIC_COLUMNS = [
 def load_data(path: Path) -> pd.DataFrame:
     df = pd.read_csv(path)
     for col in NUMERIC_COLUMNS:
-        df[col] = pd.to_numeric(df[col], errors="coerce")
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col], errors="coerce")
     return df
 
 
@@ -60,30 +61,43 @@ if selected_1.empty or selected_2.empty:
 selected_1 = selected_1.iloc[0]
 selected_2 = selected_2.iloc[0]
 
-base_cost_1 = selected_1["total_cost"]
-menu_price_1 = selected_1["selling_price_after_vat"]
-cost_after_spillage_1 = selected_1["cost_after_spillage"]
+base_cost_1 = pd.to_numeric(selected_1.get("total_cost"), errors="coerce")
+menu_price_1 = pd.to_numeric(selected_1.get("selling_price_after_vat"), errors="coerce")
+cost_after_spillage_1 = pd.to_numeric(selected_1.get("cost_after_spillage"), errors="coerce")
 
-base_cost_2 = selected_2["total_cost"]
-menu_price_2 = selected_2["selling_price_after_vat"]
-cost_after_spillage_2 = selected_2["cost_after_spillage"]
+base_cost_2 = pd.to_numeric(selected_2.get("total_cost"), errors="coerce")
+menu_price_2 = pd.to_numeric(selected_2.get("selling_price_after_vat"), errors="coerce")
+cost_after_spillage_2 = pd.to_numeric(selected_2.get("cost_after_spillage"), errors="coerce")
+
+if pd.isna(base_cost_1) or pd.isna(menu_price_1) or pd.isna(cost_after_spillage_1):
+    st.error(f"Missing pricing data for {cocktail_1}.")
+    st.stop()
+
+if pd.isna(base_cost_2) or pd.isna(menu_price_2) or pd.isna(cost_after_spillage_2):
+    st.error(f"Missing pricing data for {cocktail_2}.")
+    st.stop()
 
 recommended_price_before_vat_1 = cost_after_spillage_1 / (1 - target_gp_decimal)
 recommended_price_1 = recommended_price_before_vat_1 * 1.16
+recommended_price_1 *= 1 + (price_change / 100)
+
 recommended_price_before_vat_2 = cost_after_spillage_2 / (1 - target_gp_decimal)
 recommended_price_2 = recommended_price_before_vat_2 * 1.16
+recommended_price_2 *= 1 + (price_change / 100)
 
 current_profit_1 = menu_price_1 - base_cost_1
 recommended_profit_1 = recommended_price_1 - base_cost_1
-profit_1 = recommended_price_1 - cost_after_spillage_1
-gp_1 = ((recommended_price_1 - cost_after_spillage_1) / recommended_price_1) * 100
-markup_1 = menu_price_1 / cost_after_spillage_1
+current_gp_1 = ((menu_price_1 - cost_after_spillage_1) / menu_price_1) * 100 if menu_price_1 else 0
+recommended_gp_1 = ((recommended_price_1 - cost_after_spillage_1) / recommended_price_1) * 100 if recommended_price_1 else 0
+current_markup_1 = menu_price_1 / cost_after_spillage_1 if cost_after_spillage_1 else 0
+recommended_markup_1 = recommended_price_1 / cost_after_spillage_1 if cost_after_spillage_1 else 0
 
 current_profit_2 = menu_price_2 - base_cost_2
 recommended_profit_2 = recommended_price_2 - base_cost_2
-profit_2 = recommended_price_2 - cost_after_spillage_2
-gp_2 = ((recommended_price_2 - cost_after_spillage_2) / recommended_price_2) * 100
-markup_2 = menu_price_2 / cost_after_spillage_2
+current_gp_2 = ((menu_price_2 - cost_after_spillage_2) / menu_price_2) * 100 if menu_price_2 else 0
+recommended_gp_2 = ((recommended_price_2 - cost_after_spillage_2) / recommended_price_2) * 100 if recommended_price_2 else 0
+current_markup_2 = menu_price_2 / cost_after_spillage_2 if cost_after_spillage_2 else 0
+recommended_markup_2 = recommended_price_2 / cost_after_spillage_2 if cost_after_spillage_2 else 0
 
 
 def money(value: float) -> str:
@@ -98,11 +112,13 @@ with col1:
     st.metric("Recommended Menu Price", money(recommended_price_1))
     st.metric("Current Profit", money(current_profit_1))
     st.metric("Recommended Profit", money(recommended_profit_1))
-    st.metric("Current GP %", f"{gp_1:.1f}%")
-    st.metric("Markup", f"{markup_1:.2f}x")
-    if gp_1 >= 75:
+    st.metric("Current GP %", f"{current_gp_1:.1f}%")
+    st.metric("Recommended GP %", f"{recommended_gp_1:.1f}%")
+    st.metric("Current Markup", f"{current_markup_1:.2f}x")
+    st.metric("Recommended Markup", f"{recommended_markup_1:.2f}x")
+    if recommended_gp_1 >= 75:
         st.success("Excellent Margin")
-    elif gp_1 >= 65:
+    elif recommended_gp_1 >= 65:
         st.warning("Acceptable Margin")
     else:
         st.error("Low Margin")
@@ -114,11 +130,13 @@ with col2:
     st.metric("Recommended Menu Price", money(recommended_price_2))
     st.metric("Current Profit", money(current_profit_2))
     st.metric("Recommended Profit", money(recommended_profit_2))
-    st.metric("Current GP %", f"{gp_2:.1f}%")
-    st.metric("Markup", f"{markup_2:.2f}x")
-    if gp_2 >= 75:
+    st.metric("Current GP %", f"{current_gp_2:.1f}%")
+    st.metric("Recommended GP %", f"{recommended_gp_2:.1f}%")
+    st.metric("Current Markup", f"{current_markup_2:.2f}x")
+    st.metric("Recommended Markup", f"{recommended_markup_2:.2f}x")
+    if recommended_gp_2 >= 75:
         st.success("Excellent Margin")
-    elif gp_2 >= 65:
+    elif recommended_gp_2 >= 65:
         st.warning("Acceptable Margin")
     else:
         st.error("Low Margin")
