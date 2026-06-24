@@ -1,3 +1,4 @@
+import git
 import streamlit as st
 import pandas as pd
 
@@ -62,28 +63,32 @@ recipe_rows = []
 
 for i in range(num_ingredients):
 
-    col1, col2 = st.columns([3, 1])
+ col1, col2, col3 = st.columns([3, 1, 1])
 
-    ingredient = col1.selectbox(
-        f"Ingredient {i+1}",
-        ingredients_df["ingredient_name"],
-        key=f"ingredient_{i}"
-    )
+ ingredient = col1.selectbox(
+      f"Ingredient {i+1}",
+      ingredients_df["ingredient_name"],
+      key=f"ingredient_{i}"
+ )
 
-    quantity = col2.number_input(
-        "Quantity (ml)",
-        min_value=0.0,
-        value=30.0,
-        step=5.0,
-        key=f"qty_{i}"
-    )
+ quantity = col2.number_input(
+    "Quantity",
+    min_value=0.0,
+    value=30.0,
+    key=f"qty_{i}"
+ )
 
-    recipe_rows.append(
-        {
-            "ingredient_name": ingredient,
-            "quantity_ml": quantity
-        }
-    )
+ unit = col3.selectbox(
+    "Unit",
+    ["ml", "pcs"],
+    key=f"unit_{i}"
+ )
+
+ recipe_rows.append({
+    "ingredient_name": ingredient,
+    "quantity": quantity,
+    "unit": unit
+ })
 
 # -----------------------
 # CALCULATE BUTTON
@@ -99,9 +104,19 @@ if st.button("Calculate Price"):
         how="left"
     )
 
+    # Calculate ingredient cost based on selected unit
+
+    merged["unit_cost"] = merged.apply(
+        lambda row:
+            row["cost_per_ml"]
+            if row["unit"] == "ml"
+            else row["cost_per_pcs"],
+        axis=1
+    )
+
     merged["ingredient_cost"] = (
-        merged["quantity_ml"]
-        * merged["cost_per_ml"]
+        merged["quantity"]
+        * merged["unit_cost"]
     )
 
     total_cost = merged["ingredient_cost"].sum()
@@ -124,9 +139,20 @@ if st.button("Calculate Price"):
         - cost_after_spillage
     )
 
-    # -----------------------
+    gp = (
+        expected_profit
+        / selling_price_after_vat
+    ) * 100
+
+    # Save results for later use by Save button
+
+    st.session_state["merged"] = merged
+    st.session_state["total_cost"] = total_cost
+    st.session_state["cost_after_spillage"] = cost_after_spillage
+    st.session_state["selling_price_after_vat"] = selling_price_after_vat
+    st.session_state["gp"] = gp
+
     # DISPLAY RESULTS
-    # -----------------------
 
     st.success("Pricing Calculated")
 
@@ -152,11 +178,6 @@ if st.button("Calculate Price"):
         f"KES {expected_profit:,.2f}"
     )
 
-    gp = (
-        expected_profit
-        / selling_price_after_vat
-    ) * 100
-
     st.metric(
         "Expected GP %",
         f"{gp:.1f}%"
@@ -168,10 +189,86 @@ if st.button("Calculate Price"):
         merged[
             [
                 "ingredient_name",
-                "quantity_ml",
-                "cost_per_ml",
+                "quantity",
+                "unit",
+                "unit_cost",
                 "ingredient_cost"
             ]
         ],
         use_container_width=True
     )
+
+
+# -----------------------------------
+# SAVE COCKTAIL
+# -----------------------------------
+
+if st.button("Save Cocktail"):
+
+    if "merged" not in st.session_state:
+        st.error(
+            "Please calculate the recipe before saving."
+        )
+        st.stop()
+
+    merged = st.session_state["merged"]
+
+    total_cost = st.session_state["total_cost"]
+
+    cost_after_spillage = st.session_state[
+        "cost_after_spillage"
+    ]
+
+    selling_price_after_vat = st.session_state[
+        "selling_price_after_vat"
+    ]
+
+    cocktails_df = pd.read_csv(
+        "data/cocktail_final_prices.csv"
+    )
+
+    
+    new_cocktail_id = st.text_input(
+    "Cocktail ID",
+    placeholder="e.g. w10rr"
+    )
+
+    # Save recipe rows
+
+    recipe_save = merged.copy()
+
+    recipe_save["cocktail_id"] = new_cocktail_id
+    recipe_save["cocktail_name"] = cocktail_name
+
+    recipe_save.to_csv(
+        "data/cocktail_recipes.csv",
+        mode="a",
+        header=False,
+        index=False
+    )
+
+    # Save cocktail summary
+
+    new_cocktail = pd.DataFrame([{
+        "cocktail_id": new_cocktail_id,
+        "cocktail_name": cocktail_name,
+        "total_cost": total_cost,
+        "cost_after_spillage": cost_after_spillage,
+        "selling_price_after_vat": selling_price_after_vat
+    }])
+
+    new_cocktail.to_csv(
+        "data/cocktail_final_prices.csv",
+        mode="a",
+        header=False,
+        index=False
+    )
+
+    st.success(
+        f"{cocktail_name} saved successfully! "
+        f"(ID: {new_cocktail_id})"
+    )
+import git
+git.add
+git.commit
+git.push
