@@ -42,6 +42,10 @@ cocktail_name = st.text_input(
     placeholder="e.g Passion Mojito"
 )
 
+cocktail_id = st.text_input(
+    "Cocktail ID",
+    placeholder="e.g. w10rr"
+    )
 st.subheader("Recipe")
 
 # -----------------------
@@ -227,17 +231,11 @@ if st.button("Save Cocktail"):
         "data/cocktail_final_prices.csv"
     )
 
-    
-    new_cocktail_id = st.text_input(
-    "Cocktail ID",
-    placeholder="e.g. w10rr"
-    )
-
     # Save recipe rows
 
     recipe_save = merged.copy()
 
-    recipe_save["cocktail_id"] = new_cocktail_id
+    recipe_save["cocktail_id"] = cocktail_id
     recipe_save["cocktail_name"] = cocktail_name
 
     recipe_save.to_csv(
@@ -246,11 +244,20 @@ if st.button("Save Cocktail"):
         header=False,
         index=False
     )
+    if st.button("Save Cocktail"):
+     if not cocktail_name:
+      st.error("Please enter a cocktail name.")
+      st.stop()
+
+    if not cocktail_id:
+      st.error("Please enter a cocktail ID.")
+      st.stop()
+
 
     # Save cocktail summary
 
     new_cocktail = pd.DataFrame([{
-        "cocktail_id": new_cocktail_id,
+        "cocktail_id": cocktail_id,
         "cocktail_name": cocktail_name,
         "total_cost": total_cost,
         "cost_after_spillage": cost_after_spillage,
@@ -266,9 +273,5 @@ if st.button("Save Cocktail"):
 
     st.success(
         f"{cocktail_name} saved successfully! "
-        f"(ID: {new_cocktail_id})"
+        f"(ID: {cocktail_id})"
     )
-import git
-git.add
-git.commit
-git.push
