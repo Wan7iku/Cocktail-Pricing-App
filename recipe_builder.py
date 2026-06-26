@@ -206,13 +206,32 @@ if st.button("Calculate Price"):
 # -----------------------------------
 # SAVE COCKTAIL
 # -----------------------------------
-
 if st.button("Save Cocktail"):
+
+    # Validate inputs FIRST
+
+    if not cocktail_name.strip():
+        st.error("Please enter a cocktail name.")
+        st.stop()
+
+    if not cocktail_id.strip():
+        st.error("Please enter a cocktail ID.")
+        st.stop()
 
     if "merged" not in st.session_state:
         st.error(
             "Please calculate the recipe before saving."
         )
+        st.stop()
+
+    cocktails_df = pd.read_csv(
+        "data/cocktail_final_prices.csv"
+    )
+
+    # Prevent duplicate IDs
+
+    if cocktail_id in cocktails_df["cocktail_id"].astype(str).values:
+        st.error("This Cocktail ID already exists.")
         st.stop()
 
     merged = st.session_state["merged"]
@@ -227,11 +246,9 @@ if st.button("Save Cocktail"):
         "selling_price_after_vat"
     ]
 
-    cocktails_df = pd.read_csv(
-        "data/cocktail_final_prices.csv"
-    )
-
-    # Save recipe rows
+    # -------------------------
+    # SAVE RECIPE
+    # -------------------------
 
     recipe_save = merged.copy()
 
@@ -244,17 +261,10 @@ if st.button("Save Cocktail"):
         header=False,
         index=False
     )
-    if st.button("Save Cocktail"):
-     if not cocktail_name:
-      st.error("Please enter a cocktail name.")
-      st.stop()
 
-    if not cocktail_id:
-      st.error("Please enter a cocktail ID.")
-      st.stop()
-
-
-    # Save cocktail summary
+    # -------------------------
+    # SAVE COCKTAIL SUMMARY
+    # -------------------------
 
     new_cocktail = pd.DataFrame([{
         "cocktail_id": cocktail_id,
