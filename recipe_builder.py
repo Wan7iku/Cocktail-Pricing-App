@@ -112,9 +112,9 @@ if st.button("Calculate Price"):
 
     merged["unit_cost"] = merged.apply(
         lambda row:
-            row["cost_per_ml"]
+            row["cost_per_unit"]
             if row["unit"] == "ml"
-            else row["cost_per_pcs"],
+            else row["cost_per_unit"],
         axis=1
     )
 
@@ -225,7 +225,7 @@ if st.button("Save Cocktail"):
         st.stop()
 
     cocktails_df = pd.read_csv(
-        "data/cocktail_final_prices.csv"
+        "data/cocktail_fin_prices.csv"
     )
 
     # Prevent duplicate IDs
@@ -275,7 +275,7 @@ if st.button("Save Cocktail"):
     }])
 
     new_cocktail.to_csv(
-        "data/cocktail_final_prices.csv",
+        "data/cocktail_fin_prices.csv",
         mode="a",
         header=False,
         index=False
