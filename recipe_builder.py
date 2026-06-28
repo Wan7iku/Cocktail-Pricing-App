@@ -108,15 +108,17 @@ if st.button("Calculate Price"):
         how="left"
     )
 
+    st.write("Recipe columns:", recipe_df.columns.tolist())
+    st.write("Ingredient columns:", ingredients_df.columns.tolist())
+    st.write("Merged columns:", merged.columns.tolist())
     # Calculate ingredient cost based on selected unit
+    
+    merged["unit_cost"] = merged["cost_per_unit"]
 
-    merged["unit_cost"] = merged.apply(
-        lambda row:
-            row["cost_per_unit"]
-            if row["unit"] == "ml"
-            else row["cost_per_unit"],
-        axis=1
-    )
+    merged["ingredient_cost"] = (
+     merged["quantity"]
+     * merged["unit_cost"]
+   )
 
     merged["ingredient_cost"] = (
         merged["quantity"]
