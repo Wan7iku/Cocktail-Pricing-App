@@ -89,6 +89,7 @@ for i in range(num_ingredients):
  )
 
  recipe_rows.append({
+    "Cocktail_id": cocktail_id,
     "ingredient_name": ingredient,
     "quantity": quantity,
     "unit": unit
@@ -103,7 +104,7 @@ if st.button("Calculate Price"):
     recipe_df = pd.DataFrame(recipe_rows)
 
     merged = recipe_df.merge(
-        ingredients_df,
+        ingredients_df[["ingredient_id", "ingredient_name", "cost_per_unit"]],
         on="ingredient_name",
         how="left"
     )
@@ -232,7 +233,7 @@ if st.button("Save Cocktail"):
 
     # Prevent duplicate IDs
 
-    if cocktail_id in cocktails_df["cocktail_id"].astype(str).values:
+    if cocktail_id in cocktails_df["Cocktail_id"].astype(str).values:
         st.error("This Cocktail ID already exists.")
         st.stop()
 
@@ -254,7 +255,7 @@ if st.button("Save Cocktail"):
 
     recipe_save = merged.copy()
 
-    recipe_save["cocktail_id"] = cocktail_id
+    recipe_save["Cocktail_id"] = cocktail_id
     recipe_save["cocktail_name"] = cocktail_name
 
     recipe_save.to_csv(
@@ -269,7 +270,7 @@ if st.button("Save Cocktail"):
     # -------------------------
 
     new_cocktail = pd.DataFrame([{
-        "cocktail_id": cocktail_id,
+        "Cocktail_id": cocktail_id,
         "cocktail_name": cocktail_name,
         "total_cost": total_cost,
         "cost_after_spillage": cost_after_spillage,
