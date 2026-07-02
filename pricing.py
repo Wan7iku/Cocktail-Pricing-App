@@ -1,7 +1,11 @@
+import streamlit as st
+
+def show():
+    st.title("Cocktail Pricing Engine")
 from pathlib import Path
 
 import pandas as pd
-import streamlit as st
+
 
 DATA_PATH = Path("data/cocktail_final_prices.csv")
 NUMERIC_COLUMNS = [
@@ -23,7 +27,6 @@ def load_data(path: Path) -> pd.DataFrame:
 
 df = load_data(DATA_PATH)
 
-st.title("🍸 Cocktail Pricing Engine")
 
 target_gp = st.slider(
     "Target GP %",

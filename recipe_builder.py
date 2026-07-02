@@ -1,3 +1,7 @@
+import streamlit as st
+
+def show():
+    st.title("Recipe Builder")
 import git
 import streamlit as st
 import pandas as pd
@@ -7,8 +11,6 @@ st.set_page_config(
     page_icon="🍸",
     layout="wide"
 )
-
-st.title("🍸 Cocktail Recipe Builder")
 
 # -----------------------
 # LOAD INGREDIENT DATABASE
