@@ -30,7 +30,8 @@ target_gp = st.slider(
     "Target GP %",
     min_value=50,
     max_value=90,
-    value=75
+    value=75,
+    key= "recipe_target_gp"
 )
 
 target_gp_decimal = target_gp / 100

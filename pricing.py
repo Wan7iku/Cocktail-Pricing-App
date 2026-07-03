@@ -2,48 +2,49 @@ import streamlit as st
 
 def show():
     st.title("Cocktail Pricing Engine")
-from pathlib import Path
+    from pathlib import Path
 
-import pandas as pd
+    import pandas as pd
 
 
-DATA_PATH = Path("data/cocktail_final_prices.csv")
-NUMERIC_COLUMNS = [
+    DATA_PATH = Path("data/cocktail_final_prices.csv")
+    NUMERIC_COLUMNS = [
     "total_cost",
     "cost_after_spillage",
     "selling_price_before_vat",
     "selling_price_after_vat",
-]
+    ]
 
 
-@st.cache_data
-def load_data(path: Path) -> pd.DataFrame:
-    df = pd.read_csv(path)
-    for col in NUMERIC_COLUMNS:
+    @st.cache_data
+    def load_data(path: Path) -> pd.DataFrame:
+     df = pd.read_csv(path)
+     for col in NUMERIC_COLUMNS:
         if col in df.columns:
             df[col] = pd.to_numeric(df[col], errors="coerce")
     return df
 
 
-df = load_data(DATA_PATH)
+    df = load_data(DATA_PATH)
 
 
-target_gp = st.slider(
-    "Target GP %",
-    min_value=50,
-    max_value=90,
-    value=75,
-)
-target_gp_decimal = target_gp / 100
+    target_gp = st.slider(
+     "Target GP %",
+     min_value=50,
+     max_value=90,
+     value=75,
+     key= "pricing_target_gp"
+    )
+    target_gp_decimal = target_gp / 100
 
-price_change = st.slider(
-    "Increase Price %",
-    0,
-    50,
-    0,
-)
+    price_change = st.slider(
+     "Increase Price %",
+     0,
+     50,
+     0,
+ )
 
-cocktail_1 = st.selectbox(
+    cocktail_1 = st.selectbox(
     "Cocktail A",
     df["cocktail_name"].dropna().tolist(),
 )
