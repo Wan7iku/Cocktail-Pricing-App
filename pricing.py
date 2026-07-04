@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from pathlib import Path
 
-DATA_PATH = Path("data/cocktail_final_prices.csv")
+DATA_PATH = Path("data/cocktail_fin_prices.csv")
 
 NUMERIC_COLUMNS = [
     "total_cost",

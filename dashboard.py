@@ -28,7 +28,7 @@ def show():
     st.title("📊 Cocktail Dashboard")
     st.caption("Overview of cocktail costs, selling prices, and profitability.")
 
-    df = load_data("data/cocktail_final_prices.csv")
+    df = load_data("data/cocktail_fin_prices.csv")
 
     if df.empty:
         st.error("No data available.")
