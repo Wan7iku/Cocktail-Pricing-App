@@ -124,13 +124,22 @@ def show():
 
 # Visualizations
     col1, col2 = st.columns(2)
+    chart_df = filtered_df.dropna(
+    subset=[
+        "total_cost",
+        "selling_price_after_vat",
+        "profit",
+        "gp_percent",
+    ]
+)
 
+    
     scatter_fig = px.scatter(
-        filtered_df,
+        chart_df,
         x="total_cost",
         y="selling_price_after_vat",
-        size="profit" if "profit" in filtered_df.columns else None,
-        color="gp_percent" if "gp_percent" in filtered_df.columns else None,
+        size="profit",
+        color="gp_percent",
         hover_name="cocktail_name",
         labels={
             "total_cost": "Total Cost",
@@ -168,7 +177,7 @@ def show():
     )
 
     fig3 = px.scatter(
-        df,
+        chart_df,
         x="cost_after_spillage",
         y="selling_price_after_vat",
         hover_name="cocktail_name",
