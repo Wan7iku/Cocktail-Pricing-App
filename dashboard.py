@@ -25,8 +25,8 @@ def load_data(path: str) -> pd.DataFrame:
 
 
 def show():
-    st.write("dashboard loaded")
-    st.title("📊 Cocktail Dashboard")
+    st.title("Welcome to the milk bar")
+    st.subheader("📊 Cocktail Dashboard")
     st.caption("Overview of cocktail costs, selling prices, and profitability.")
 
     df = load_data("data/cocktail_fin_prices.csv")
