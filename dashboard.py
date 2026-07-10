@@ -1,3 +1,16 @@
+from sqlalchemy import create_engine
+
+DATABASE_URL = "sqlite:///cocktail.db"
+
+engine = create_engine(
+    DATABASE_URL,
+    echo=False
+)
+
+import pandas as pd
+from sqlalchemy import text
+from database import engine
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -11,15 +24,27 @@ NUMERIC_COLUMNS = [
 
 
 @st.cache_data
-def load_data(path: str) -> pd.DataFrame:
-    df = pd.read_csv(path)
+def load_data():
+
+    query = text("""
+        SELECT *
+        FROM cocktails
+    """)
+
+    df = pd.read_sql(query, engine)
 
     for col in NUMERIC_COLUMNS:
         if col in df.columns:
-            df[col] = pd.to_numeric(df[col], errors="coerce")
+            df[col] = pd.to_numeric(
+                df[col],
+                errors="coerce"
+            )
 
     if "cocktail_name" in df.columns:
-        df["cocktail_name"] = df["cocktail_name"].fillna("Unknown")
+        df["cocktail_name"] = (
+            df["cocktail_name"]
+            .fillna("Unknown")
+        )
 
     return df
 
@@ -29,7 +54,7 @@ def show():
     st.subheader("📊 Cocktail Dashboard")
     st.caption("Overview of cocktail costs, selling prices, and profitability.")
 
-    df = load_data("data/cocktail_fin_prices.csv")
+    df = load_data()
 
     if df.empty:
         st.error("No data available.")
