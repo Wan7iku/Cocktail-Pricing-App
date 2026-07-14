@@ -1,4 +1,4 @@
-Cocktail_id,cocktail_name,ingredient_id,ingredient_name,unit_quantity
+cocktail_id,cocktail_name,ingredient_id,ingredient_name,unit_quantity
 v01sb,Sea Breeze,56,Sminorff Red,60
 v01sb,Sea Breeze,202,Grapefruit juice,30
 v01sb,Sea Breeze,203,Cranberry juice,60
