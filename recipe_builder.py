@@ -1,12 +1,12 @@
 import streamlit as st
 import pandas as pd
-import git
-
-
-@st.cache_data
-def load_ingredients():
-    return pd.read_csv("data/ingredients_utf8.csv")
-
+from crud import (
+    get_all_ingredients,
+    get_all_cocktails,
+    get_ingredient_by_name,
+    add_cocktail,
+    add_recipe,
+)
 
 def show():
 
@@ -15,9 +15,19 @@ def show():
     # -----------------------
     # LOAD INGREDIENT DATABASE
     # -----------------------
+    ingredients = get_all_ingredients()
 
-    ingredients_df = load_ingredients()
-
+    ingredients_df = pd.DataFrame(
+        [
+            {
+                "ingredient_id": i.ingredient_id,
+                "ingredient_name": i.ingredient_name,
+                "cost_per_unit": i.cost_per_unit,
+                "unit": i.unit,
+            }
+            for i in ingredients
+        ]
+    )
     # -----------------------
     # GP TARGET
     # -----------------------
@@ -210,20 +220,16 @@ def show():
             )
             st.stop()
 
-        cocktails_df = pd.read_csv(
-            "data/cocktail_fin_prices.csv"
-        )
+        cocktails = get_all_cocktails()
 
-        if (
-            cocktail_id
-            in cocktails_df["Cocktail_id"]
-            .astype(str)
-            .values
-        ):
-            st.error(
-                "This Cocktail ID already exists."
-            )
-            st.stop()
+        existing_ids = [
+          c.cocktail_id
+        for c in cocktails
+       ]
+
+        if cocktail_id in existing_ids:
+         st.error("Cocktail ID already exists.")
+         st.stop()
 
         merged = st.session_state["merged"]
 
@@ -237,38 +243,29 @@ def show():
             "selling_price_after_vat"
         ]
 
-        recipe_save = merged.copy()
-
-        recipe_save["Cocktail_id"] = cocktail_id
-        recipe_save["cocktail_name"] = cocktail_name
-
-        recipe_save.to_csv(
-            "data/cocktail_recipes.csv",
-            mode="a",
-            header=False,
-            index=False,
+        add_cocktail(
+            cocktail_id=cocktail_id,
+            cocktail_name=cocktail_name,
+            total_cost=total_cost,
+            cost_after_spillage=cost_after_spillage,
+            selling_price_before_vat=(
+               cost_after_spillage /
+               (1 - target_gp_decimal)
+         ),
+         selling_price_after_vat=selling_price_after_vat,
+        )
+        for _, row in merged.iterrows():
+          ingredient = get_ingredient_by_name(
+            row["ingredient_name"]
         )
 
-        new_cocktail = pd.DataFrame(
-            [
-                {
-                    "Cocktail_id": cocktail_id,
-                    "cocktail_name": cocktail_name,
-                    "total_cost": total_cost,
-                    "cost_after_spillage": cost_after_spillage,
-                    "selling_price_after_vat": selling_price_after_vat,
-                }
-            ]
+        add_recipe(
+           cocktail_id=cocktail_id,
+           ingredient_id=ingredient.ingredient_id,
+           quantity=row["quantity"],
+            unit=row["unit"],
         )
-
-        new_cocktail.to_csv(
-            "data/cocktail_fin_prices.csv",
-            mode="a",
-            header=False,
-            index=False,
-        )
-
-        st.success(
-            f"{cocktail_name} saved successfully! "
-            f"(ID: {cocktail_id})"
-        )
+    st.success(
+         f"{cocktail_name} saved successfully! "
+         f"(ID: {cocktail_id})"
+    )
