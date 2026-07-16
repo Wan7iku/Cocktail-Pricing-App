@@ -1,8 +1,9 @@
 import streamlit as st
 import pandas as pd
-from pathlib import Path
 
-DATA_PATH = Path("data/cocktail_fin_prices.csv")
+from crud import get_all_cocktails
+
+
 
 NUMERIC_COLUMNS = [
     "total_cost",
@@ -13,12 +14,30 @@ NUMERIC_COLUMNS = [
 
 
 @st.cache_data
-def load_data(path: Path) -> pd.DataFrame:
-    df = pd.read_csv(path)
+def load_data():
+
+    cocktails = get_all_cocktails()
+
+    df = pd.DataFrame(
+        [
+            {
+                "cocktail_id": c.cocktail_id,
+                "cocktail_name": c.cocktail_name,
+                "total_cost": c.total_cost,
+                "cost_after_spillage": c.cost_after_spillage,
+                "selling_price_before_vat": c.selling_price_before_vat,
+                "selling_price_after_vat": c.selling_price_after_vat,
+            }
+            for c in cocktails
+        ]
+    )
 
     for col in NUMERIC_COLUMNS:
         if col in df.columns:
-            df[col] = pd.to_numeric(df[col], errors="coerce")
+            df[col] = pd.to_numeric(
+                df[col],
+                errors="coerce",
+            )
 
     return df
 
@@ -30,7 +49,10 @@ def money(value: float) -> str:
 def show():
     st.title("Cocktail Pricing Engine")
 
-    df = load_data(DATA_PATH)
+    df = load_data()
+    if df.empty:
+     st.warning("No cocktails found in the database.")
+     st.stop()
 
     target_gp = st.slider(
         "Target GP %",
@@ -49,17 +71,18 @@ def show():
         0,
         key="pricing_price_change",
     )
+    cocktail_names=df["cocktail_name"].dropna().tolist()
 
     cocktail_1 = st.selectbox(
         "Cocktail A",
-        df["cocktail_name"].dropna().tolist(),
+        cocktail_names,
         key="pricing_cocktail_1",
     )
 
     cocktail_2 = st.selectbox(
         "Cocktail B",
-        df["cocktail_name"].dropna().tolist(),
-        index=1,
+        cocktail_names,
+        index=1 if len(cocktail_names) > 1 else 0,
         key="pricing_cocktail_2",
     )
 
@@ -99,17 +122,20 @@ def show():
 
     current_profit_1 = menu_price_1 - base_cost_1
     recommended_profit_1 = recommended_price_1 - base_cost_1
-    current_gp_1 = ((menu_price_1 - cost_after_spillage_1) / menu_price_1) * 100
-    recommended_gp_1 = ((recommended_price_1 - cost_after_spillage_1) / recommended_price_1) * 100
-    current_markup_1 = menu_price_1 / cost_after_spillage_1
-    recommended_markup_1 = recommended_price_1 / cost_after_spillage_1
-
+    current_gp_1 = ((menu_price_1 - cost_after_spillage_1) / menu_price_1) * 100 if menu_price_1 else 0
+    recommended_gp_1 = (((recommended_price_1 - cost_after_spillage_1) / recommended_price_1) * 100 if recommended_price_1 else 0)
+    current_markup_1 = ( menu_price_1 / cost_after_spillage_1
+    if cost_after_spillage_1
+    else 0 )
+    recommended_markup_1 = ( recommended_price_1 / cost_after_spillage_1
+    if cost_after_spillage_1
+    else 0 )
     current_profit_2 = menu_price_2 - base_cost_2
     recommended_profit_2 = recommended_price_2 - base_cost_2
-    current_gp_2 = ((menu_price_2 - cost_after_spillage_2) / menu_price_2) * 100
-    recommended_gp_2 = ((recommended_price_2 - cost_after_spillage_2) / recommended_price_2) * 100
-    current_markup_2 = menu_price_2 / cost_after_spillage_2
-    recommended_markup_2 = recommended_price_2 / cost_after_spillage_2
+    current_gp_2 = ((menu_price_2 - cost_after_spillage_2) / menu_price_2) * 100 if menu_price_2 else 0
+    recommended_gp_2 = (((recommended_price_2 - cost_after_spillage_2) / recommended_price_2) * 100 if recommended_price_2 else 0)
+    current_markup_2 = (menu_price_2 / cost_after_spillage_2 if cost_after_spillage_2 else 0)
+    recommended_markup_2 = (recommended_price_2 / cost_after_spillage_2 if cost_after_spillage_2 else 0)
 
     col1, col2 = st.columns(2)
 
