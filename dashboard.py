@@ -1,4 +1,10 @@
+import streamlit as st
+import pandas as pd
+import plotly.express as px
+
+from sqlalchemy import text
 from sqlalchemy import create_engine
+from database import engine
 
 DATABASE_URL = "sqlite:///cocktail.db"
 
@@ -6,14 +12,6 @@ engine = create_engine(
     DATABASE_URL,
     echo=False
 )
-
-import pandas as pd
-from sqlalchemy import text
-from database import engine
-
-import streamlit as st
-import pandas as pd
-import plotly.express as px
 
 NUMERIC_COLUMNS = [
     "total_cost",
@@ -23,7 +21,7 @@ NUMERIC_COLUMNS = [
 ]
 
 
-@st.cache_data
+@st.cache_data(ttl=5)
 def load_data():
 
     query = text("""
@@ -96,18 +94,28 @@ def show():
     total_cocktails = len(df)
     avg_gp = df["gp_percent"].mean() if "gp_percent" in df.columns else pd.NA
     avg_price = df["selling_price_after_vat"].mean() if "selling_price_after_vat" in df.columns else pd.NA
-    best_cocktail = (
-        df.loc[df["profit"].idxmax(), "cocktail_name"]
-        if "profit" in df.columns and "cocktail_name" in df.columns
-        else "N/A"
-    )
-    top_profit = (
-        df.sort_values(
+    if (
+    "profit" in df.columns
+    and not df["profit"].dropna().empty
+):
+     best_cocktail = df.loc[
+        df["profit"].idxmax(),
+        "cocktail_name"
+     ]
+    else:
+     best_cocktail = "N/A"
+
+    if "profit" in df.columns:
+      top_profit = (
+        df.dropna(subset=["profit"])
+        .sort_values(
             "profit",
             ascending=False,
         )
         .head(10)
-    )
+      )
+    else:
+        top_profit = pd.DataFrame()
 
     avg_cost = filtered_df["total_cost"].mean() if "total_cost" in filtered_df.columns else pd.NA
     avg_sell = (
@@ -163,7 +171,7 @@ def show():
         chart_df,
         x="total_cost",
         y="selling_price_after_vat",
-        size="profit",
+        size=chart_df["profit"].clip(lower=1),
         color="gp_percent",
         hover_name="cocktail_name",
         labels={
@@ -176,6 +184,9 @@ def show():
     )
     scatter_fig.update_layout(template="plotly_white")
     col1.plotly_chart(scatter_fig, use_container_width=True)
+    if chart_df.empty:
+        st.warning("No chart data available.")
+        st.stop()
 
     fig1 = px.bar(
         top_profit,
