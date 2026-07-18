@@ -254,17 +254,17 @@ def show():
          ),
          selling_price_after_vat=selling_price_after_vat,
         )
-        for _, row in merged.iterrows():
-          ingredient = get_ingredient_by_name(
-            row["ingredient_name"]
-        )
+        st.write("Merged columns:", merged.columns.tolist())
+        st.dataframe(merged.head())
 
-        add_recipe(
-           cocktail_id=cocktail_id,
-           ingredient_id=ingredient.ingredient_id,
-           quantity=row["quantity"],
-            unit=row["unit"],
-        )
+        for _, row in merged.iterrows():
+         
+           add_recipe(
+              cocktail_id=cocktail_id,
+              ingredient_id= row["ingredient_id"],
+              quantity=row["quantity"],
+               unit=row["unit"],
+            )
     st.success(
          f"{cocktail_name} saved successfully! "
          f"(ID: {cocktail_id})"
