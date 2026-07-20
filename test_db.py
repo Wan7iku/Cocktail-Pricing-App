@@ -1,9 +1,11 @@
-from sqlalchemy import inspect
-from database import engine
+from crud import get_all_ingredients
 
-inspector = inspect(engine)
+ingredients = get_all_ingredients()
 
-print("Tables in the database:")
+print("Number of ingredients:", len(ingredients))
 
-for table in inspector.get_table_names():
-    print("-", table)
+for ingredient in ingredients[:5]:
+    print(
+        ingredient.ingredient_id,
+        ingredient.ingredient_name,
+    )

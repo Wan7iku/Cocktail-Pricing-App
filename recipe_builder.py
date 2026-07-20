@@ -265,7 +265,7 @@ def show():
               quantity=row["quantity"],
                unit=row["unit"],
             )
-    st.success(
-         f"{cocktail_name} saved successfully! "
-         f"(ID: {cocktail_id})"
-    )
+        st.success(
+            f"{cocktail_name} saved successfully! "
+            f"(ID: {cocktail_id})"
+        )

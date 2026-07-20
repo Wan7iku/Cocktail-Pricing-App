@@ -20,7 +20,6 @@ NUMERIC_COLUMNS = [
     "selling_price_after_vat",
 ]
 
-
 @st.cache_data(ttl=5)
 def load_data():
 
