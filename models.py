@@ -10,7 +10,6 @@ from sqlalchemy import (
 class Base(DeclarativeBase):
     pass
 class Ingredient(Base):
-
     __tablename__ = "ingredients"
 
     ingredient_id = Column(Integer, primary_key=True, autoincrement=True)
@@ -127,7 +126,7 @@ class Supplier(Base):
     phone = Column(String)
 
     email = Column(String)
-supplier_id = Column(
+    supplier_id = Column(
     Integer,
     ForeignKey("suppliers.supplier_id"),
     nullable=True

@@ -45,7 +45,6 @@ def load_data():
 
     return df
 
-
 def show():
     st.title("Welcome to the milk bar")
     st.subheader("📊 Cocktail Dashboard")
