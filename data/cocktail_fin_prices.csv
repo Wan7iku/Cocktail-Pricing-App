@@ -1,4 +1,4 @@
-cocktail_id,cocktail_name,total_cost,cost_after_spillage,selling_price_before_vat,selling_price_after_vat,profit,gp_percent
+cocktail_id,cocktail_name,total_cost,cost_after_spillage,selling_price_before_vat,selling_price_after_vat,profit,gp_percent                  
 b01sc,Side car,231.25,242.81,693.75,804.75,561.94,69.83
 b02ba,Brandy Alexander,239.1,251.05,717.3,832.07,581.01,69.83
 b03sa,Sangria,6303.52,6618.69,18910.55,21936.24,15317.55,69.83

@@ -5,7 +5,7 @@ from models import Ingredient, Cocktail, Recipe
 db = SessionLocal()
 def import_ingredients():
 
-    df = pd.read_csv("data/ingredients_utf8.csv")
+    df = pd.read_csv("Ingredients_utf8.csv")
 
     count = 0
 
@@ -14,7 +14,7 @@ def import_ingredients():
         existing = (
             db.query(Ingredient)
             .filter_by(
-                ingredient_name=row["ingredient_name"]
+                ingredient_name=row["ingredient_id"]
             )
             .first()
         )
@@ -48,7 +48,7 @@ def import_cocktails():
         existing = (
             db.query(Cocktail)
             .filter_by(
-                cocktail_id=row["Cocktail_id"]
+                cocktail_id=row["cocktail_id"]
             )
             .first()
         )
@@ -58,7 +58,7 @@ def import_cocktails():
 
         cocktail = Cocktail(
 
-            cocktail_id=row["Cocktail_id"],
+            cocktail_id=row["cocktail_id"],
 
             cocktail_name=row["cocktail_name"],
 
@@ -88,7 +88,7 @@ def import_cocktails():
     print(f"✅ Imported {count} cocktails") 
 def import_recipes():
 
-    df = pd.read_csv("data/cocktail_recipes.csv")
+    df = pd.read_csv("data/recipes.csv")
 
     count = 0
 
@@ -107,15 +107,12 @@ def import_recipes():
 
         recipe = Recipe(
 
-            cocktail_id=row["Cocktail_id"],
+            cocktail_id=row["cocktail_id"],
 
-            ingredient_id=ingredient.ingredient_id,
+            ingredient_id=row["ingredient_id"],
 
-            quantity=float(row["quantity"]),
-
-            unit=row["unit"]
-
-        )
+            quantity=float(row["unit_quantity"]),
+            )
 
         db.add(recipe)
 

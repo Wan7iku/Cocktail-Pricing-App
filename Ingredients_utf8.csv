@@ -239,7 +239,7 @@ ingredient_id,category,subcategory,ingredient_name,bottle_size_ml,bottle_cost,un
 240,Mixer,Spices,Nutmeg,50,215,ml,4.3
 241,Mixer,Spices,Cardamom,100,500,ml,5
 242,Mixer,Cream,Whipping cream,400,600,ml,1.5
-243,Mixer,Sauce,Horseradish sauce,136,650,ml,
+243,Mixer,Sauce,Horseradish sauce,200,600,ml,3
 244,Garnish,Herb,Celery,500,200,ml,0.4
 245,Garnish,Fruit ,Olive,345,200,ml,0.579710145
 246,Mixer,Spices,Egg white,30,650,pcs,21.66666667

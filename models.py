@@ -111,25 +111,3 @@ class Sale(Base):
     quantity = Column(Integer)
 
     selling_price = Column(Float)
-class Supplier(Base):
-
-    __tablename__ = "suppliers"
-
-    supplier_id = Column(
-        Integer,
-        primary_key=True,
-        autoincrement=True
-    )
-
-    supplier_name = Column(String)
-
-    phone = Column(String)
-
-    email = Column(String)
-    supplier_id = Column(
-    Integer,
-    ForeignKey("suppliers.supplier_id"),
-    nullable=True
-)
-
-supplier = relationship("Supplier")

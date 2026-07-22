@@ -4,7 +4,6 @@ import pandas as pd
 from crud import get_all_cocktails
 
 
-
 NUMERIC_COLUMNS = [
     "total_cost",
     "cost_after_spillage",
