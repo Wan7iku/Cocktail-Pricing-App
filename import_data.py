@@ -45,16 +45,6 @@ def import_cocktails():
 
     for _, row in df.iterrows():
 
-        existing = (
-            db.query(Cocktail)
-            .filter_by(
-                cocktail_id=row["cocktail_id"]
-            )
-            .first()
-        )
-
-        if existing:
-            continue
 
         cocktail = Cocktail(
 
@@ -86,7 +76,7 @@ def import_cocktails():
     db.commit()
 
     print(f"✅ Imported {count} cocktails") 
-    
+
 def import_recipes():
 
     df = pd.read_csv("data/recipes.csv")
