@@ -86,6 +86,7 @@ def import_cocktails():
     db.commit()
 
     print(f"✅ Imported {count} cocktails") 
+    
 def import_recipes():
 
     df = pd.read_csv("data/recipes.csv")
